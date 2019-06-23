@@ -15,5 +15,5 @@ except:
     print('Repositório Existe')
 
 git('git add -A')
-git(f'git commit -m {commit}')
+git(f'git commit -m "{commit}"')
 git('git status')
