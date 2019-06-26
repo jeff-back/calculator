@@ -18,6 +18,7 @@ def getInput():
         print('Invalido!')
 
     return numeros
+    
 
 def helper():
     lin()
