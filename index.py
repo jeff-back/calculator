@@ -1,9 +1,9 @@
-from operator import somas, multi, sub, div
+from operator import somas, multi, sub, div, potent
 from model import getInput, helper, title, lin
 from time import sleep
 
 title('Calculadora')
-print('aguarde...')
+print('aguarde...', flush=False)
 sleep(1)
 
 while True:
@@ -21,12 +21,7 @@ while True:
         sleep(2)
 
     elif opcao == '-':
-        #inputs
-        print('> Numeros: (999 para sair) ')
-        numeros = getInput()
-
-        #processo
-        resultado = sub(numeros)
+        resultado = sub()
         sleep(2)
 
     elif opcao == '*':
@@ -47,6 +42,10 @@ while True:
         resultado = div(numeros)
         sleep(2)
 
+    elif opcao == "**":
+        resultado = potent()
+        sleep(2)
+
     elif opcao == '--help':
         helper()
     
@@ -54,7 +53,7 @@ while True:
         exit()
 
     #output
-    print(f'Resultado: {resultado}')
+    print(f'Resultado: {resultado}', flush=False)
     lin()
     sleep(3)
     
